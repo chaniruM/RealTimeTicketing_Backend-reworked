@@ -1,7 +1,5 @@
 package com.example.RealTimeTicketing.service;
 
-import com.example.RealTimeTicketing.model.Ticket;
-import com.example.RealTimeTicketing.model.TicketEntity;
 import com.example.RealTimeTicketing.model.Vendor;
 import com.example.RealTimeTicketing.repository.TicketRepository;
 import com.example.RealTimeTicketing.repository.VendorRepository;
@@ -11,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -21,9 +18,6 @@ public class VendorService implements Runnable{
 
     @Autowired
     private TicketPoolService ticketPoolService;
-
-    @Autowired
-    private ThreadConfigurationService threadConfigurationService;
 
     @Autowired
     private TicketRepository ticketRepository;
@@ -46,10 +40,10 @@ public class VendorService implements Runnable{
            String vendorName = (vendor != null) ? vendor.getName() : "Unknown Vendor";
 
            while (true) {
-               if (threadConfigurationService.isStopSimulation()) {
-                   System.out.println("Vendor " + vendorName + " stopping as simulation is stopped.");
-                   break;
-               }
+//               if (threadConfigurationService.isStopSimulation()) {
+//                   System.out.println("Vendor " + vendorName + " stopping as simulation is stopped.");
+//                   break;
+//               }
                if (!ticketPoolService.canAddMoreTickets()) {
                    System.out.println("Vendor " + vendorName + " finished releasing tickets.");
                    break;
@@ -62,7 +56,7 @@ public class VendorService implements Runnable{
            }
        } catch (InterruptedException e) {
            Thread.currentThread().interrupt();
-           System.out.println("Vendor " + vendorId + " was interrupted.");
+           System.out.println(Thread.currentThread().getName() + " was interrupted.");
        }
    }
 

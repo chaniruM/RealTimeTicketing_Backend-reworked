@@ -5,7 +5,6 @@ import com.example.RealTimeTicketing.model.Customer;
 import com.example.RealTimeTicketing.model.Vendor;
 import com.example.RealTimeTicketing.service.ConfigurationService;
 import com.example.RealTimeTicketing.service.CustomerService;
-import com.example.RealTimeTicketing.service.ThreadConfigurationService;
 import com.example.RealTimeTicketing.service.VendorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
@@ -26,8 +25,8 @@ public class ThreadController {
     @Autowired
     private CustomerService customerService;
 
-    @Autowired
-    private ThreadConfigurationService threadConfigurationService;
+//    @Autowired
+//    private ThreadConfigurationService threadConfigurationService;
 
     @Autowired
     private ConfigurationService configurationService;
@@ -43,7 +42,7 @@ public class ThreadController {
     // Start simulation based on saved thread counts
     @PostMapping("/start")
     public ResponseEntity<Map<String, String>> startSimulation() {
-        threadConfigurationService.setStopSimulation(false);
+//        threadConfigurationService.setStopSimulation(false);
 
         List<Vendor> vendors = vendorService.getAllVendors();
         List<Customer> customers = customerService.getAllCustomers();
@@ -81,16 +80,16 @@ public class ThreadController {
 
     @PostMapping("/stop")
     public ResponseEntity<Map<String,String>> stopSimulation() {
-        threadConfigurationService.setStopSimulation(true);
+//        threadConfigurationService.setStopSimulation(true);
 
         for (Thread thread : customerThreads.values()) {
             thread.interrupt();
-            System.out.println(thread.getName()+" is stopped.");
+            System.out.println(thread.getName()+" is stopping as simulation is stopped.");
         }
 
         for (Thread thread : vendorThreads.values()) {
             thread.interrupt();
-            System.out.println(thread.getName()+" is stopped.");
+            System.out.println(thread.getName()+" is stopping as simulation is stopped.");
         }
 
         Map<String, String> response = new HashMap<>();
