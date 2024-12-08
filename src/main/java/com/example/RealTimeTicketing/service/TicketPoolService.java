@@ -1,7 +1,10 @@
 package com.example.RealTimeTicketing.service;
 
+import com.example.RealTimeTicketing.LogWebSocketHandler;
+import com.example.RealTimeTicketing.model.Customer;
 import com.example.RealTimeTicketing.model.Ticket;
 import com.example.RealTimeTicketing.model.Vendor;
+import com.example.RealTimeTicketing.repository.CustomerRepository;
 import com.example.RealTimeTicketing.repository.TicketRepository;
 import com.example.RealTimeTicketing.repository.VendorRepository;
 import org.apache.logging.log4j.LogManager;
@@ -26,6 +29,12 @@ public class TicketPoolService {
     @Autowired
     private VendorRepository vendorRepository;
 
+    @Autowired
+    private CustomerRepository customerRepository;
+
+    @Autowired
+    private LogWebSocketHandler logWebSocketHandler;
+
     private static final Logger logger = LogManager.getLogger(TicketPoolService.class);
 
     private final List<Ticket> ticketpool = Collections.synchronizedList(new ArrayList<>());
@@ -35,6 +44,7 @@ public class TicketPoolService {
 
     private int totalTickets; // Total tickets to be released
     private int maxTicketCapacity; // Max capacity of the ticket pool
+
 
     public AtomicInteger getTicketsAdded() {
         return ticketsAdded;
@@ -85,6 +95,7 @@ public class TicketPoolService {
             System.out.println("Vendor " + vendorName + " added Ticket-" + ticketId);
 
 //            System.out.println("Vendor " + vendorName + " added Ticket-" + ticketId);
+            logTicketMovement("Ticket-"+ ticketId + " added by "+ vendorName +" for: " + eventName);  // Log the addition
 
             notEmpty.signalAll(); // Notify customers waiting for tickets
         } finally {
@@ -116,10 +127,22 @@ public class TicketPoolService {
             ticketInDb.setCustomerId(customerId);
             ticketRepository.save(ticketInDb);
 
+            Customer customer = customerRepository.findById(customerId).orElse(null);
+            String customerName = (customer != null) ? customer.getName() : "Unknown Vendor";
+            logTicketMovement("Ticket-"+ ticket.getTicketId() + " bought by "+ customerName +" for LKR." + ticket.getTicketPrice());
+
             notFull.signalAll(); // Notify vendors waiting to add tickets
             return ticket;
         } finally {
             lock.unlock();
+        }
+    }
+
+    public void logTicketMovement(String logMessage) {
+        try {
+            logWebSocketHandler.sendLog(logMessage);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

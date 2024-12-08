@@ -68,4 +68,8 @@ public class CustomerService implements Runnable {
     public List<Customer> getAllCustomers() {
         return customerRepository.findAll();
     }
+
+    public void deleteCustomer(String id) {
+        customerRepository.deleteById(id);
+    }
 }
