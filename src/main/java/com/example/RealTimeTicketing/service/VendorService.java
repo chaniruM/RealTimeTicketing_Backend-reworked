@@ -40,10 +40,6 @@ public class VendorService implements Runnable{
            String vendorName = (vendor != null) ? vendor.getName() : "Unknown Vendor";
 
            while (true) {
-//               if (threadConfigurationService.isStopSimulation()) {
-//                   System.out.println("Vendor " + vendorName + " stopping as simulation is stopped.");
-//                   break;
-//               }
                if (!ticketPoolService.canAddMoreTickets()) {
                    System.out.println("Vendor " + vendorName + " finished releasing tickets.");
                    break;

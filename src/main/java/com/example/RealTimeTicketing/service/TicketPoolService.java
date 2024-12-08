@@ -1,6 +1,6 @@
 package com.example.RealTimeTicketing.service;
 
-import com.example.RealTimeTicketing.LogWebSocketHandler;
+import com.example.RealTimeTicketing.WebSocket.LogWebSocketHandler;
 import com.example.RealTimeTicketing.model.Customer;
 import com.example.RealTimeTicketing.model.Ticket;
 import com.example.RealTimeTicketing.model.Vendor;

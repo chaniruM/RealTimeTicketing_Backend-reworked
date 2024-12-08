@@ -25,9 +25,6 @@ public class ThreadController {
     @Autowired
     private CustomerService customerService;
 
-//    @Autowired
-//    private ThreadConfigurationService threadConfigurationService;
-
     @Autowired
     private ConfigurationService configurationService;
 
@@ -42,22 +39,20 @@ public class ThreadController {
     // Start simulation based on saved thread counts
     @PostMapping("/start")
     public ResponseEntity<Map<String, String>> startSimulation() {
-//        threadConfigurationService.setStopSimulation(false);
 
         List<Vendor> vendors = vendorService.getAllVendors();
         List<Customer> customers = customerService.getAllCustomers();
 
         Configuration configuration = configurationService.getConfiguration();
 
-        // Retrieve values from the Configuration object
         int ticketReleaseRate = configuration.getTicketReleaseRate();
-        int retrievalRate = configuration.getCustomerRetrievalRate();
+        int customerRetrievalRate = configuration.getCustomerRetrievalRate();
 
 
         for (int i = 0; i < vendors.size(); i++) {
             Vendor vendor = vendors.get(i);
             VendorService vendorService = applicationContext.getBean(VendorService.class);
-            vendorService.setVendorDetails(vendor.getId(), retrievalRate); // Set the details
+            vendorService.setVendorDetails(vendor.getId(), ticketReleaseRate); // Set the details
             Thread vendorThread = new Thread(vendorService, "VendorThread-" + (i+1));
             vendorThread.start();
             customerThreads.put(vendor.getId(), vendorThread);
@@ -66,7 +61,7 @@ public class ThreadController {
         for (int i = 0; i < customers.size(); i++) {
             Customer customer = customers.get(i);
             CustomerService customerService = applicationContext.getBean(CustomerService.class);
-            customerService.setCustomerDetails(customer.getId(), retrievalRate); // Set the details
+            customerService.setCustomerDetails(customer.getId(), customerRetrievalRate); // Set the details
             Thread customerThread = new Thread(customerService, "CustomerThread-" + (i+1));
             customerThread.start();
             customerThreads.put(customer.getId(), customerThread);
@@ -80,7 +75,6 @@ public class ThreadController {
 
     @PostMapping("/stop")
     public ResponseEntity<Map<String,String>> stopSimulation() {
-//        threadConfigurationService.setStopSimulation(true);
 
         for (Thread thread : customerThreads.values()) {
             thread.interrupt();
