@@ -1,21 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--<Configuration status="WARN">-->
-<Configuration status="info">
+<Configuration status="WARN">
     <Appenders>
-        <!-- File Appender (Formatted Logs) -->
-        <File name="File" fileName="/Users/chanirumannapperuma/Downloads/RealTimeTicketing_Backend-main/src/main/Logs/ticketing.log">
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n" />
-        </File>
-
+        <!-- Console Appender -->
         <Console name="Console" target="SYSTEM_OUT">
-            <PatternLayout/>
+            <PatternLayout />
         </Console>
+
+        <!-- File Appender -->
+<!--        <File name="File" fileName="/Users/chanirumannapperuma/Downloads/RealTimeTicketing_Backend-main/src/main/Logs/ticketing.log" immediateFlush="true">-->
+<!--            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n" />-->
+<!--        </File>-->
+        <!-- File Appender: Save only application logs -->
+        <File name="File" fileName="logs/app.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %-5level %logger{36} - %msg%n" />
+            <!-- Only include logs specified in the custom logger -->
+            <Filters>
+                <ThresholdFilter level="DEBUG" onMatch="ACCEPT" onMismatch="DENY" />
+            </Filters>
+        </File>
     </Appenders>
 
     <Loggers>
         <Root level="info">
-            <AppenderRef ref="File" />
             <AppenderRef ref="Console" />
+            <AppenderRef ref="File" />
         </Root>
     </Loggers>
+
+    <!-- Root Logger: For console, log everything -->
+<!--    <Loggers>-->
+<!--        <Root level="INFO">-->
+<!--            <AppenderRef ref="Console" />-->
+<!--        </Root>-->
+
+<!--        &lt;!&ndash; Custom Logger: Specify log level for the file &ndash;&gt;-->
+<!--        <Logger name="com.example.RealTimeTicketing" level="DEBUG" additivity="false">-->
+<!--            <AppenderRef ref="File" />-->
+<!--        </Logger>-->
+<!--    </Loggers>-->
 </Configuration>

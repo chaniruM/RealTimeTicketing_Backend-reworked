@@ -1,0 +1,250 @@
+2024-12-09 16:18:47 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - Starting RealTimeTicketingApplication using Java 21.0.2 with PID 49964 (/Users/chanirumannapperuma/Downloads/RealTimeTicketing_Backend-main/target/classes started by chanirumannapperuma in /Users/chanirumannapperuma/Downloads/RealTimeTicketing_Backend-main)
+2024-12-09 16:18:47 [main] DEBUG com.example.RealTimeTicketing.RealTimeTicketingApplication - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-09 16:18:47 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 16:18:48 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - Started RealTimeTicketingApplication in 1.199 seconds (process running for 1.651)
+2024-12-09 16:18:48 [main] INFO  com.example.RealTimeTicketing.service.TicketPoolService - This is a test log message.
+2024-12-09 16:19:44 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-1
+2024-12-09 16:19:44 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-2
+2024-12-09 16:19:49 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-3
+2024-12-09 16:19:49 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-4
+2024-12-09 16:19:54 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-5
+2024-12-09 16:19:54 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-6
+2024-12-09 16:19:59 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-7
+2024-12-09 16:19:59 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-8
+2024-12-09 16:20:04 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-9
+2024-12-09 16:20:04 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-10
+2024-12-09 16:20:09 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-12
+2024-12-09 16:20:57 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-14
+2024-12-09 16:21:02 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-15
+2024-12-09 16:21:15 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-17
+2024-12-09 16:21:22 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-18
+2024-12-09 16:21:27 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-20
+2024-12-09 16:21:32 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-19
+2024-12-09 16:22:02 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - CustomerThread-1 waiting for tickets to be added...
+2024-12-09 16:31:38 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - Starting RealTimeTicketingApplication using Java 21.0.2 with PID 51555 (/Users/chanirumannapperuma/Downloads/RealTimeTicketing_Backend-main/target/classes started by chanirumannapperuma in /Users/chanirumannapperuma/Downloads/RealTimeTicketing_Backend-main)
+2024-12-09 16:31:38 [main] DEBUG com.example.RealTimeTicketing.RealTimeTicketingApplication - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-09 16:31:38 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 16:31:39 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - Started RealTimeTicketingApplication in 1.173 seconds (process running for 1.599)
+2024-12-09 16:31:39 [main] INFO  com.example.RealTimeTicketing.service.TicketPoolService - This is a test log message.
+2024-12-09 16:32:20 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-1
+2024-12-09 16:32:20 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-2
+2024-12-09 16:32:25 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-3
+2024-12-09 16:32:25 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-4
+2024-12-09 16:32:30 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-5
+2024-12-09 16:32:30 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-6
+2024-12-09 16:32:34 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-7
+2024-12-09 16:32:34 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-8
+2024-12-09 16:32:42 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-9
+2024-12-09 16:32:42 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-10
+2024-12-09 16:32:47 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-11
+2024-12-09 16:32:52 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-13
+2024-12-09 16:33:02 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-14
+2024-12-09 16:33:07 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-16
+2024-12-09 16:33:12 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-18
+2024-12-09 16:33:17 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-19
+2024-12-09 16:33:22 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-20
+2024-12-09 16:33:27 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-17
+2024-12-09 16:33:57 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - CustomerThread-1 waiting for tickets to be added...
+2024-12-09 16:40:05 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - Starting RealTimeTicketingApplication using Java 21.0.2 with PID 52655 (/Users/chanirumannapperuma/Downloads/RealTimeTicketing_Backend-main/target/classes started by chanirumannapperuma in /Users/chanirumannapperuma/Downloads/RealTimeTicketing_Backend-main)
+2024-12-09 16:40:05 [main] DEBUG com.example.RealTimeTicketing.RealTimeTicketingApplication - Running with Spring Boot v3.4.0, Spring v6.2.0
+2024-12-09 16:40:05 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 16:40:06 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - Started RealTimeTicketingApplication in 1.166 seconds (process running for 1.604)
+2024-12-09 16:40:06 [main] INFO  com.example.RealTimeTicketing.service.TicketPoolService - This is a test log message.
+2024-12-09 16:41:34 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - Starting RealTimeTicketingApplication using Java 21.0.2 with PID 52866 (/Users/chanirumannapperuma/Downloads/RealTimeTicketing_Backend-main/target/classes started by chanirumannapperuma in /Users/chanirumannapperuma/Downloads/RealTimeTicketing_Backend-main)
+2024-12-09 16:41:34 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 16:41:35 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-12-09 16:41:35 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 3 MongoDB repository interfaces.
+2024-12-09 16:41:35 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+2024-12-09 16:41:35 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+2024-12-09 16:41:35 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 16:41:35 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-09 16:41:35 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 16:41:35 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 475 ms
+2024-12-09 16:41:35 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.2.1"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "aarch64", "version": "15.0.1"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@265a094b, com.mongodb.Jep395RecordCodecProvider@1f536481, com.mongodb.KotlinCodecProvider@5234b61a]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2024-12-09 16:41:35 [cluster-ClusterId{value='6756d067052cfa667d7ae889', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=6668083, minRoundTripTimeNanos=0}
+2024-12-09 16:41:35 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+2024-12-09 16:41:35 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+2024-12-09 16:41:35 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - Started RealTimeTicketingApplication in 1.071 seconds (process running for 1.533)
+2024-12-09 16:41:35 [main] INFO  com.example.RealTimeTicketing.service.TicketPoolService - This is a test log message.
+2024-12-09 16:41:41 [http-nio-8083-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 16:41:41 [http-nio-8083-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 16:41:41 [http-nio-8083-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-09 16:42:26 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-1
+2024-12-09 16:42:26 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-2
+2024-12-09 16:42:31 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-3
+2024-12-09 16:42:31 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-4
+2024-12-09 16:42:36 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-5
+2024-12-09 16:42:36 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-6
+2024-12-09 16:42:41 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-7
+2024-12-09 16:42:41 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-8
+2024-12-09 16:42:46 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-9
+2024-12-09 16:42:46 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-10
+2024-12-09 16:42:51 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-12
+2024-12-09 16:42:56 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-13
+2024-12-09 16:43:01 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-14
+2024-12-09 16:43:06 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-15
+2024-12-09 16:43:11 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-16
+2024-12-09 16:43:16 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-17
+2024-12-09 16:43:21 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-18
+2024-12-09 16:43:26 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-19
+2024-12-09 16:43:31 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-20
+2024-12-09 16:43:36 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-11
+2024-12-09 16:58:20 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-09 16:58:20 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-09 16:58:22 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - Starting RealTimeTicketingApplication using Java 21.0.2 with PID 55045 (/Users/chanirumannapperuma/Downloads/RealTimeTicketing_Backend-main/target/classes started by chanirumannapperuma in /Users/chanirumannapperuma/Downloads/RealTimeTicketing_Backend-main)
+2024-12-09 16:58:22 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 16:58:23 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-12-09 16:58:23 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 3 MongoDB repository interfaces.
+2024-12-09 16:58:23 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+2024-12-09 16:58:23 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+2024-12-09 16:58:23 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 16:58:23 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-09 16:58:23 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 16:58:23 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 492 ms
+2024-12-09 16:58:23 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.2.1"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "aarch64", "version": "15.0.1"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@697a0948, com.mongodb.Jep395RecordCodecProvider@7cf63b9a, com.mongodb.KotlinCodecProvider@4776e209]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2024-12-09 16:58:23 [cluster-ClusterId{value='6756d457bdfbe31a0b394cb8', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=7438417, minRoundTripTimeNanos=0}
+2024-12-09 16:58:23 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+2024-12-09 16:58:23 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+2024-12-09 16:58:23 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - Started RealTimeTicketingApplication in 1.157 seconds (process running for 1.587)
+2024-12-09 16:58:23 [main] INFO  com.example.RealTimeTicketing.service.TicketPoolService - This is a test log message.
+2024-12-09 16:58:27 [http-nio-8083-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 16:58:27 [http-nio-8083-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 16:58:27 [http-nio-8083-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2024-12-09 16:59:26 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor3 added Ticket-1
+2024-12-09 16:59:26 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-1
+2024-12-09 16:59:26 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-2
+2024-12-09 16:59:26 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-3
+2024-12-09 16:59:26 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-2
+2024-12-09 16:59:31 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor3 added Ticket-4
+2024-12-09 16:59:31 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-3
+2024-12-09 16:59:31 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-5
+2024-12-09 16:59:31 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-6
+2024-12-09 16:59:31 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-4
+2024-12-09 16:59:36 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor3 added Ticket-7
+2024-12-09 16:59:36 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-5
+2024-12-09 16:59:36 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-8
+2024-12-09 16:59:36 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-9
+2024-12-09 16:59:36 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-6
+2024-12-09 16:59:41 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor3 added Ticket-10
+2024-12-09 16:59:41 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-7
+2024-12-09 16:59:41 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-11
+2024-12-09 16:59:41 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-12
+2024-12-09 16:59:41 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-8
+2024-12-09 16:59:46 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor3 added Ticket-13
+2024-12-09 16:59:46 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-9
+2024-12-09 16:59:46 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-14
+2024-12-09 16:59:46 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-10
+2024-12-09 16:59:46 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - TicketPool full. VendorThread-2 waiting for tickets to be sold...
+2024-12-09 16:59:46 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-15
+2024-12-09 16:59:51 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-11
+2024-12-09 16:59:51 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-17
+2024-12-09 16:59:51 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-12
+2024-12-09 16:59:51 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - TicketPool full. VendorThread-3 waiting for tickets to be sold...
+2024-12-09 16:59:51 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor3 added Ticket-16
+2024-12-09 16:59:56 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-13
+2024-12-09 16:59:56 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-19
+2024-12-09 16:59:56 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-14
+2024-12-09 16:59:56 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - TicketPool full. VendorThread-2 waiting for tickets to be sold...
+2024-12-09 16:59:56 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-18
+2024-12-09 17:00:01 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-15
+2024-12-09 17:00:01 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-17
+2024-12-09 17:00:01 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - TicketPool full. VendorThread-3 waiting for tickets to be sold...
+2024-12-09 17:00:01 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor3 added Ticket-20
+2024-12-09 17:00:06 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-16
+2024-12-09 17:00:06 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-19
+2024-12-09 17:00:11 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-18
+2024-12-09 17:00:11 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-20
+2024-12-09 17:00:16 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 finished purchasing tickets.
+2024-12-09 17:00:16 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 finished purchasing tickets.
+2024-12-09 17:01:15 [SpringApplicationShutdownHook] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2024-12-09 17:01:15 [tomcat-shutdown] INFO  org.springframework.boot.web.embedded.tomcat.GracefulShutdown - Graceful shutdown complete
+2024-12-09 17:01:16 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - Starting RealTimeTicketingApplication using Java 21.0.2 with PID 55422 (/Users/chanirumannapperuma/Downloads/RealTimeTicketing_Backend-main/target/classes started by chanirumannapperuma in /Users/chanirumannapperuma/Downloads/RealTimeTicketing_Backend-main)
+2024-12-09 17:01:16 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - No active profile set, falling back to 1 default profile: "default"
+2024-12-09 17:01:16 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-12-09 17:01:16 [main] INFO  org.springframework.data.repository.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 3 MongoDB repository interfaces.
+2024-12-09 17:01:17 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port 8083 (http)
+2024-12-09 17:01:17 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8083"]
+2024-12-09 17:01:17 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2024-12-09 17:01:17 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.33]
+2024-12-09 17:01:17 [main] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2024-12-09 17:01:17 [main] INFO  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 524 ms
+2024-12-09 17:01:17 [main] INFO  org.mongodb.driver.client - MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "5.2.1"}, "os": {"type": "Darwin", "name": "Mac OS X", "architecture": "aarch64", "version": "15.0.1"}, "platform": "Java/Oracle Corporation/21.0.2+13-LTS-58"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@265a094b, com.mongodb.Jep395RecordCodecProvider@1f536481, com.mongodb.KotlinCodecProvider@5234b61a]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=null, password=null}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2024-12-09 17:01:17 [cluster-ClusterId{value='6756d5055dd8175530399b04', description='null'}-localhost:27017] INFO  org.mongodb.driver.cluster - Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=11053833, minRoundTripTimeNanos=0}
+2024-12-09 17:01:17 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8083"]
+2024-12-09 17:01:17 [main] INFO  org.springframework.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port 8083 (http) with context path '/'
+2024-12-09 17:01:17 [main] INFO  com.example.RealTimeTicketing.RealTimeTicketingApplication - Started RealTimeTicketingApplication in 1.193 seconds (process running for 1.669)
+2024-12-09 17:01:17 [main] INFO  com.example.RealTimeTicketing.service.TicketPoolService - This is a test log message.
+2024-12-09 17:01:17 [http-nio-8083-exec-1] INFO  org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-12-09 17:01:17 [http-nio-8083-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2024-12-09 17:01:17 [http-nio-8083-exec-1] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2024-12-09 17:02:25 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - TicketPool Empty. CustomerThread-2 waiting for tickets to be added...
+2024-12-09 17:02:25 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-1
+2024-12-09 17:02:25 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor3 added Ticket-2
+2024-12-09 17:02:25 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-3
+2024-12-09 17:02:25 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-1
+2024-12-09 17:02:25 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-2
+2024-12-09 17:02:30 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-4
+2024-12-09 17:02:30 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor3 added Ticket-5
+2024-12-09 17:02:30 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-6
+2024-12-09 17:02:30 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-3
+2024-12-09 17:02:30 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-4
+2024-12-09 17:02:30 [VendorThread-1] WARN  com.example.RealTimeTicketing.service.VendorService - VendorThread-1 was interrupted.
+2024-12-09 17:02:30 [VendorThread-2] WARN  com.example.RealTimeTicketing.service.VendorService - VendorThread-2 was interrupted.
+2024-12-09 17:02:30 [VendorThread-3] WARN  com.example.RealTimeTicketing.service.VendorService - VendorThread-3 was interrupted.
+2024-12-09 17:02:30 [CustomerThread-2] WARN  com.example.RealTimeTicketing.service.CustomerService - CustomerThread-2 was interrupted.
+2024-12-09 17:02:30 [CustomerThread-1] WARN  com.example.RealTimeTicketing.service.CustomerService - CustomerThread-1 was interrupted.
+2024-12-09 17:02:33 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-7
+2024-12-09 17:02:33 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-8
+2024-12-09 17:02:33 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor3 added Ticket-9
+2024-12-09 17:02:33 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-5
+2024-12-09 17:02:33 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-6
+2024-12-09 17:02:36 [VendorThread-2] WARN  com.example.RealTimeTicketing.service.VendorService - VendorThread-2 was interrupted.
+2024-12-09 17:02:36 [VendorThread-1] WARN  com.example.RealTimeTicketing.service.VendorService - VendorThread-1 was interrupted.
+2024-12-09 17:02:36 [VendorThread-3] WARN  com.example.RealTimeTicketing.service.VendorService - VendorThread-3 was interrupted.
+2024-12-09 17:02:36 [CustomerThread-1] WARN  com.example.RealTimeTicketing.service.CustomerService - CustomerThread-1 was interrupted.
+2024-12-09 17:02:36 [CustomerThread-2] WARN  com.example.RealTimeTicketing.service.CustomerService - CustomerThread-2 was interrupted.
+2024-12-09 17:02:39 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-10
+2024-12-09 17:02:39 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-11
+2024-12-09 17:02:39 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-7
+2024-12-09 17:02:39 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-8
+2024-12-09 17:02:39 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - TicketPool full. VendorThread-3 waiting for tickets to be sold...
+2024-12-09 17:02:39 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor3 added Ticket-12
+2024-12-09 17:02:44 [VendorThread-2] WARN  com.example.RealTimeTicketing.service.VendorService - VendorThread-2 was interrupted.
+2024-12-09 17:02:44 [VendorThread-3] WARN  com.example.RealTimeTicketing.service.VendorService - VendorThread-3 was interrupted.
+2024-12-09 17:02:44 [CustomerThread-2] WARN  com.example.RealTimeTicketing.service.CustomerService - CustomerThread-2 was interrupted.
+2024-12-09 17:02:44 [CustomerThread-1] WARN  com.example.RealTimeTicketing.service.CustomerService - CustomerThread-1 was interrupted.
+2024-12-09 17:02:44 [VendorThread-1] WARN  com.example.RealTimeTicketing.service.VendorService - VendorThread-1 was interrupted.
+2024-12-09 17:02:46 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-13
+2024-12-09 17:02:46 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-9
+2024-12-09 17:02:46 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-10
+2024-12-09 17:02:46 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - TicketPool full. VendorThread-2 waiting for tickets to be sold...
+2024-12-09 17:02:46 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-14
+2024-12-09 17:02:46 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - TicketPool full. VendorThread-3 waiting for tickets to be sold...
+2024-12-09 17:02:46 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor3 added Ticket-15
+2024-12-09 17:02:51 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-11
+2024-12-09 17:02:51 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-12
+2024-12-09 17:02:51 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-17
+2024-12-09 17:02:51 [VendorThread-3] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor3 added Ticket-18
+2024-12-09 17:02:51 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - TicketPool full. VendorThread-1 waiting for tickets to be sold...
+2024-12-09 17:02:52 [VendorThread-2] WARN  com.example.RealTimeTicketing.service.VendorService - VendorThread-2 was interrupted.
+2024-12-09 17:02:52 [VendorThread-3] WARN  com.example.RealTimeTicketing.service.VendorService - VendorThread-3 was interrupted.
+2024-12-09 17:02:52 [CustomerThread-2] WARN  com.example.RealTimeTicketing.service.CustomerService - CustomerThread-2 was interrupted.
+2024-12-09 17:02:52 [VendorThread-1] WARN  com.example.RealTimeTicketing.service.VendorService - VendorThread-1 was interrupted.
+2024-12-09 17:02:52 [CustomerThread-1] WARN  com.example.RealTimeTicketing.service.CustomerService - CustomerThread-1 was interrupted.
+2024-12-09 17:02:57 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-13
+2024-12-09 17:02:57 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-14
+2024-12-09 17:02:57 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - TicketPool full. VendorThread-1 waiting for tickets to be sold...
+2024-12-09 17:02:57 [VendorThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor1 added Ticket-19
+2024-12-09 17:02:57 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - TicketPool full. VendorThread-2 waiting for tickets to be sold...
+2024-12-09 17:02:57 [VendorThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - Vendor vendor2 added Ticket-20
+2024-12-09 17:03:02 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-15
+2024-12-09 17:03:02 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-17
+2024-12-09 17:03:05 [CustomerThread-1] WARN  com.example.RealTimeTicketing.service.CustomerService - CustomerThread-1 was interrupted.
+2024-12-09 17:03:05 [CustomerThread-2] WARN  com.example.RealTimeTicketing.service.CustomerService - CustomerThread-2 was interrupted.
+2024-12-09 17:03:09 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-18
+2024-12-09 17:03:09 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust2 purchased Ticket-19
+2024-12-09 17:03:14 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.CustomerService - Customer cust1 purchased Ticket-20
+2024-12-09 17:03:14 [CustomerThread-2] INFO  com.example.RealTimeTicketing.service.TicketPoolService - TicketPool Empty. CustomerThread-2 waiting for tickets to be added...
+2024-12-09 17:03:19 [CustomerThread-1] INFO  com.example.RealTimeTicketing.service.TicketPoolService - TicketPool Empty. CustomerThread-1 waiting for tickets to be added...
+2024-12-09 17:03:23 [CustomerThread-2] WARN  com.example.RealTimeTicketing.service.CustomerService - CustomerThread-2 was interrupted.
+2024-12-09 17:03:23 [CustomerThread-1] WARN  com.example.RealTimeTicketing.service.CustomerService - CustomerThread-1 was interrupted.

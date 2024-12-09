@@ -39,16 +39,18 @@ public class CustomerService implements Runnable {
             String customerName = (customer != null) ? customer.getName() : "Unknown Customer";
             while (true) {
                 if (ticketPoolService.allTicketsSold()) {
-                    System.out.println("Customer " + customerName + " finished purchasing tickets.");
+//                    System.out.println("Customer " + customerName + " finished purchasing tickets.");
+                    logger.info("Customer " + customerName + " finished purchasing tickets.");
                     break;
                 }
 
                 Ticket ticket = ticketPoolService.removeTicket(customerId);
                 if (ticket != null) {
-                    System.out.println("Customer " + customerName + " purchased Ticket-" + ticket.getTicketId());
-//                    logger.info("Customer " + customerName + " purchased Ticket-" + ticket.getTicketId());
+//                    System.out.println("Customer " + customerName + " purchased Ticket-" + ticket.getTicketId());
+                    logger.info("Customer " + customerName + " purchased Ticket-" + ticket.getTicketId());
                 }else {
-                    System.out.println("Customer " + customerName + " failed to purchase ticket-" + ticket.getTicketId());
+//                    System.out.println("Customer " + customerName + " failed to purchase ticket-" + ticket.getTicketId());
+                    logger.warn("Customer " + customerName + " failed to purchase ticket-" + ticket.getTicketId());
                 }
                 Thread.sleep(retrievalRate * 1000); // Simulate retrieval delay
             }
@@ -56,6 +58,7 @@ public class CustomerService implements Runnable {
             Thread.currentThread().interrupt();
 //            System.err.println("Customer " + customerId + " was interrupted.");
             System.out.println(Thread.currentThread().getName() + " was interrupted.");
+            logger.warn(Thread.currentThread().getName() + " was interrupted.");
         }
     }
 

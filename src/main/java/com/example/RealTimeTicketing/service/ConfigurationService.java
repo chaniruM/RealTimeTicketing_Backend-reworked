@@ -1,6 +1,8 @@
 package com.example.RealTimeTicketing.service;
 
 import com.google.gson.Gson;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 import com.example.RealTimeTicketing.model.Configuration;
 
@@ -11,6 +13,7 @@ import java.io.IOException;
 
 @Service
 public class ConfigurationService {
+    private static final Logger logger = LogManager.getLogger(CustomerService.class);
 
     private Configuration configuration;
 
@@ -32,6 +35,7 @@ public class ConfigurationService {
             gson.toJson(configuration, writer);
         } catch (IOException e) {
             System.out.println(e.getMessage());
+            logger.error(e.getMessage());
             throw new RuntimeException(e);
         }
     }
@@ -42,6 +46,7 @@ public class ConfigurationService {
             this.configuration = gson.fromJson(fileReader, Configuration.class);
         } catch (IOException e) {
             System.out.println(e.getMessage());
+            logger.error(e.getMessage());
         }
     }
 }

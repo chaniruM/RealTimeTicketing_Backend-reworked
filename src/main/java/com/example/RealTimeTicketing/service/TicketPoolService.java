@@ -78,6 +78,7 @@ public class TicketPoolService {
         try {
             while (ticketpool.size() >= maxTicketCapacity) {
                 notFull.await(); // Wait until there's space
+                logger.info("TicketPool full. "+ Thread.currentThread().getName()+" waiting for tickets to be sold...");
             }
 
             Ticket ticket = new Ticket(ticketId, eventName, ticketPrice, vendorId);
@@ -86,15 +87,13 @@ public class TicketPoolService {
             ticket.setCreatedAt(LocalDateTime.now());
 
             ticketpool.add(ticket);
-
             ticketRepository.save(ticket);
 
             Vendor vendor = vendorRepository.findById(vendorId).orElse(null);
             String vendorName = (vendor != null) ? vendor.getName() : "Unknown Vendor";
-//            logger.info("Vendor " + vendorName + " added Ticket-" + ticketId);
-            System.out.println("Vendor " + vendorName + " added Ticket-" + ticketId);
-
+            logger.info("Vendor " + vendorName + " added Ticket-" + ticketId);
 //            System.out.println("Vendor " + vendorName + " added Ticket-" + ticketId);
+
             logTicketMovement("Ticket-"+ ticketId + " added by "+ vendorName +" for: " + eventName);  // Log the addition
 
             notEmpty.signalAll(); // Notify customers waiting for tickets
@@ -107,11 +106,12 @@ public class TicketPoolService {
         lock.lock();
         try {
             while (ticketpool.isEmpty() && ticketsSold.get() < totalTickets) {
-//                logger.info(Thread.currentThread().getName()+" waiting for tickets to be added...");
-                System.out.println(Thread.currentThread().getName()+" waiting for tickets to be added...");
+                logger.info("TicketPool Empty. "+Thread.currentThread().getName()+" waiting for tickets to be added...");
+//                System.out.println(Thread.currentThread().getName()+" waiting for tickets to be added...");
                 notEmpty.await();// Wait for tickets to be added
             }
             if (ticketpool.isEmpty() && ticketsSold.get() >= totalTickets) {
+                logger.info("Tickets sold out!");
                 return null; // No more tickets to sell
             }
             Ticket ticket = ticketpool.remove(0);
@@ -119,7 +119,8 @@ public class TicketPoolService {
 
             Ticket ticketInDb = ticketRepository.findById(ticket.getTicketId()).orElse(null);
             if (ticketInDb == null) {
-                System.out.println("Ticket not found");
+//                System.out.println("Ticket not found");
+                logger.warn("Ticket not found");
                 return null;
             }
 

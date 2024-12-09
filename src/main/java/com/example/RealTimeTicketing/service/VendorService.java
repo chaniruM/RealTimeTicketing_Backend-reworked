@@ -10,11 +10,13 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.concurrent.locks.ReentrantLock;
 
 @Service
 @Scope("prototype")
 public class VendorService implements Runnable{
     private static final Logger logger = LogManager.getLogger(VendorService.class);
+    private final ReentrantLock lock = new ReentrantLock();
 
     @Autowired
     private TicketPoolService ticketPoolService;
@@ -35,6 +37,7 @@ public class VendorService implements Runnable{
 
    @Override
    public void run() {
+        lock.lock();
        try {
            Vendor vendor = vendorRepository.findById(vendorId).orElse(null);
            String vendorName = (vendor != null) ? vendor.getName() : "Unknown Vendor";
@@ -53,6 +56,9 @@ public class VendorService implements Runnable{
        } catch (InterruptedException e) {
            Thread.currentThread().interrupt();
            System.out.println(Thread.currentThread().getName() + " was interrupted.");
+           logger.warn(Thread.currentThread().getName() + " was interrupted.");
+       } finally {
+           lock.unlock();
        }
    }
 
