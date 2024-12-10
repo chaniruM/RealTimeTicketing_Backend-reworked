@@ -11,7 +11,18 @@ import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-
+/**
+ * Service class responsible for simulating customer behavior in the real-time ticketing system.
+ * It creates a separate thread to continuously attempt purchasing tickets for a specific customer
+ * at a defined retrieval rate.
+ *
+ * **Thread Safety Considerations:**
+ * This class uses a prototype scope (`@Scope("prototype")`) which creates a new bean instance
+ * for each injection. However, the `run` method doesn't explicitly handle thread safety concerns.
+ * If multiple customer threads try to access the `ticketPoolService` methods concurrently,
+ * it might lead to unexpected behavior. Consider using synchronized blocks or thread-safe collections
+ * within the `run` method for better control.
+ */
 @Service
 @Scope("prototype")
 public class CustomerService implements Runnable {
