@@ -18,10 +18,7 @@ import java.util.List;
  *
  * **Thread Safety Considerations:**
  * This class uses a prototype scope (`@Scope("prototype")`) which creates a new bean instance
- * for each injection. However, the `run` method doesn't explicitly handle thread safety concerns.
- * If multiple customer threads try to access the `ticketPoolService` methods concurrently,
- * it might lead to unexpected behavior. Consider using synchronized blocks or thread-safe collections
- * within the `run` method for better control.
+ * for each injection.
  */
 @Service
 @Scope("prototype")
@@ -29,13 +26,18 @@ public class CustomerService implements Runnable {
 
     private static final Logger logger = LogManager.getLogger(CustomerService.class);
 
+    //for interacting with the TicketPool to purchase tickets.
     @Autowired
     private TicketPoolService ticketPoolService;
 
+    //for interacting with the Customer database table.
     @Autowired
     private CustomerRepository customerRepository;
 
+    //Unique identifier of the customer this service represents.
     private String customerId;
+
+    //Retrieval rate (in seconds) at which the customer attempts to purchase tickets.
     private int retrievalRate;
 
     public void setCustomerDetails(String customerId, int retrievalRate) {
@@ -43,6 +45,11 @@ public class CustomerService implements Runnable {
         this.retrievalRate = retrievalRate;
     }
 
+    /**
+     * The main thread run method that simulates customer behavior.
+     * It continuously attempts to purchase tickets for the assigned customer at the retrieval rate
+     * until all tickets are sold out.
+     */
     @Override
     public void run() {
         try {
@@ -69,14 +76,30 @@ public class CustomerService implements Runnable {
         }
     }
 
+    /**
+     * Saves a new customer to the database.
+     *
+     * @param customer The Customer object to be saved.
+     * @return The saved Customer object.
+     */
     public Customer addCustomer(Customer customer) {
         return customerRepository.save(customer);
     }
 
+    /**
+     * Retrieves a list of all customers from the database.
+     *
+     * @return A list of all Customer objects.
+     */
     public List<Customer> getAllCustomers() {
         return customerRepository.findAll();
     }
 
+    /**
+     * Deletes a customer from the database by their ID.
+     *
+     * @param id The unique identifier of the customer to be deleted.
+     */
     public void deleteCustomer(String id) {
         customerRepository.deleteById(id);
     }

@@ -8,6 +8,10 @@ import org.springframework.web.socket.handler.TextWebSocketHandler;
 
 import java.util.concurrent.CopyOnWriteArrayList;
 
+/**
+ * WebSocket handler for handling real-time log messages.
+ * It manages WebSocket sessions, handles incoming messages, and broadcasts log messages to the frontend.
+ */
 @Component
 public class LogWebSocketHandler extends TextWebSocketHandler {
 

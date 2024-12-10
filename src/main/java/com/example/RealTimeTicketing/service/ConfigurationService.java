@@ -10,6 +10,10 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
+/**
+ * Service class responsible for managing the configuration settings.
+ * It provides methods to load, update, save, and retrieve the configuration object.
+ */
 @Service
 public class ConfigurationService {
     private static final Logger logger = LogManager.getLogger(CustomerService.class);
@@ -28,6 +32,13 @@ public class ConfigurationService {
         return this.configuration;
     }
 
+    /**
+     * Saves the current in-memory configuration to a JSON file named "configuration.json"
+     * located in the "src/main/resources" directory.
+     *
+     * @param configuration The Configuration object to be saved.
+     * @throws RuntimeException If an IOException occurs during file writing.
+     */
     public void saveConfiguration(Configuration configuration) {
         Gson gson = new Gson();
         try (FileWriter writer = new FileWriter("src/main/resources/configuration.json")) {
@@ -38,6 +49,11 @@ public class ConfigurationService {
         }
     }
 
+    /**
+     * Loads the application configuration from a JSON file named "configuration.json"
+     * located in the "src/main/resources" directory. If the file doesn't exist or an error occurs,
+     * it logs the error and continues with the default configuration.
+     */
     public void loadConfiguration() {
         Gson gson = new Gson();
         try (FileReader fileReader = new FileReader("src/main/resources/configuration.json")){
