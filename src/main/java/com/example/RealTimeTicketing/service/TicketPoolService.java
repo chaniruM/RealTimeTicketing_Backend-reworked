@@ -46,12 +46,12 @@ public class TicketPoolService {
     private int maxTicketCapacity; // Max capacity of the ticket pool
 
 
+    private final AtomicInteger ticketsAdded = new AtomicInteger(0); // Shared counter for total tickets added
+    private final AtomicInteger ticketsSold = new AtomicInteger(0); // Shared counter for total tickets sold
+
     public AtomicInteger getTicketsAdded() {
         return ticketsAdded;
     }
-
-    private final AtomicInteger ticketsAdded = new AtomicInteger(0); // Shared counter for total tickets added
-    private final AtomicInteger ticketsSold = new AtomicInteger(0); // Shared counter for total tickets sold
 
     public void setTotalTickets(int totalTickets) {
         this.totalTickets = totalTickets;
