@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * REST controller for retrieving information about the ticket pool.
+ * Provides an endpoint to get the current status of the ticket pool.
+ */
 @RestController
 @RequestMapping("/api/ticket-pool")
 public class TicketPoolController {
@@ -17,6 +21,14 @@ public class TicketPoolController {
     @Autowired
     private TicketPoolService ticketPoolService;
 
+    /**
+     * Retrieves the current status of the ticket pool, including:
+     *  - currentTicketCount: Number of tickets currently available in the pool.
+     *  - ticketsToRelease: Number of tickets remaining to be released based on the configured total tickets.
+     *  - ticketsSold: Number of tickets sold so far.
+     *
+     * @return A ResponseEntity containing a Map with the ticket pool status information.
+     */
     @GetMapping("/status")
     public ResponseEntity<Map<String, Integer>> getStatus() {
         Map<String, Integer> status = new HashMap<>();

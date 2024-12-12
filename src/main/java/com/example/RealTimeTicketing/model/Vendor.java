@@ -3,6 +3,9 @@ package com.example.RealTimeTicketing.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+/**
+ * Represents a vendor in the real-time ticketing system.
+ */
 @Document(collection = "vendors")
 public class Vendor {
 

@@ -6,7 +6,7 @@ import com.example.RealTimeTicketing.repository.VendorRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
+import org.springframework.data.mongodb.UncategorizedMongoDbException;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -18,7 +18,6 @@ import java.util.concurrent.locks.ReentrantLock;
  * on behalf of a specific vendor.
  */
 @Service
-@Scope("prototype")
 public class VendorService implements Runnable{
     private static final Logger logger = LogManager.getLogger(VendorService.class);
 
@@ -43,9 +42,28 @@ public class VendorService implements Runnable{
     //Release rate (in seconds) at which the vendor attempts to add tickets to the pool.
     private int releaseRate;
 
+    /**
+     * Sets the vendor details (ID and release rate) for this service instance.
+     *
+     * @param vendorId Unique identifier of the vendor.
+     * @param releaseRate Release rate (in seconds) at which the vendor releases tickets.
+     */
     public void setVendorDetails(String vendorId, int releaseRate){
         this.vendorId = vendorId;
         this.releaseRate = releaseRate;
+    }
+
+    /**
+     * Sets the dependencies (injected services) for this service instance.
+     *
+     * @param ticketPoolService Service instance for interacting with the TicketPool.
+     * @param vendorRepository Repository instance for interacting with the Vendor table.
+     * @param ticketRepository Repository instance for interacting with the Ticket table.
+     */
+    public void setDependencies(TicketPoolService ticketPoolService, VendorRepository vendorRepository, TicketRepository ticketRepository) {
+        this.ticketPoolService = ticketPoolService;
+        this.vendorRepository = vendorRepository;
+        this.ticketRepository = ticketRepository;
     }
 
     /**
@@ -56,37 +74,35 @@ public class VendorService implements Runnable{
     @Override
     public void run() {
         try {
-           Vendor vendor = vendorRepository.findById(vendorId).orElse(null);
-           String vendorName = (vendor != null) ? vendor.getName() : "Unknown Vendor";
+            while (!Thread.currentThread().isInterrupted()) {
+                lock.lock();
+                try {
+                    int currentCount = (int) ticketRepository.count();
 
+                    // Stop if the total ticket count reaches or exceeds the limit
+                    if (currentCount >= ticketPoolService.getTotalTickets()) {
+                        logger.info("Vendor " + Thread.currentThread().getName() + " finished releasing tickets. Total ticket limit reached.");
+                        break;
+                    }
 
-           while (true) {
-               lock.lock();
-               try {
-                   int currentCount = (int) ticketRepository.count();
+                    // Add ticket
+                    ticketPoolService.addTicket("SL vs Eng", 1000, vendorId);
+                }finally {
+                    lock.unlock();
+                }
+                // Simulate delay before adding the next ticket
+                Thread.sleep(releaseRate * 1000);
 
-                   // Stop if the total ticket count reaches or exceeds the limit
-                   if (currentCount >= ticketPoolService.getTotalTickets()) {
-                       logger.info("Vendor " + vendorName + " finished releasing tickets. Total ticket limit reached.");
-                       break;
-                   }
-
-                   // Add ticket
-                   ticketPoolService.addTicket("SL vs Eng", 1000, vendorId);
-               }finally {
-                   lock.unlock();
-               }
-
-               // Simulate delay before adding the next ticket
-               Thread.sleep(releaseRate * 1000);
-
-
-           }
+            }
         } catch (InterruptedException e) {
-           Thread.currentThread().interrupt();
-           logger.warn(Thread.currentThread().getName() + " was interrupted.");
+            Thread.currentThread().interrupt();
+            logger.warn(Thread.currentThread().getName() + " was interrupted.");
+        } catch (UncategorizedMongoDbException e){
+            System.out.println(Thread.currentThread().getName() + " was terminated while accessing database.");
+        } finally {
+            logger.info(Thread.currentThread().getName() + " is stopping gracefully.");
         }
-   }
+    }
 
     /**
      * Saves a new vendor to the database.

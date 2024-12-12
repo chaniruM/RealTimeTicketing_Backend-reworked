@@ -60,6 +60,7 @@ public class ConfigurationService {
             this.configuration = gson.fromJson(fileReader, Configuration.class);
         } catch (IOException e) {
             logger.error(e.getMessage());
+            logger.error("Configuration file not found. Change path to absolute path!");
         }
     }
 }

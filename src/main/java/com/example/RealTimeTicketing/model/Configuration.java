@@ -1,5 +1,8 @@
 package com.example.RealTimeTicketing.model;
 
+/**
+ * Represents the configuration settings for the real-time ticketing system.
+ */
 public class Configuration {
     private int ticketReleaseRate;
     private int customerRetrievalRate;

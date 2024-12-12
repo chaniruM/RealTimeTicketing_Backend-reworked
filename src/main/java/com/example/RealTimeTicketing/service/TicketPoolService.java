@@ -120,12 +120,8 @@ public class TicketPoolService {
             ticketpool.add(ticket);
             ticketRepository.save(ticket);
 
-            // Find the vendor name
-            Vendor vendor = vendorRepository.findById(vendorId).orElse(null);
-            String vendorName = (vendor != null) ? vendor.getName() : "Unknown Vendor";
-
-            logger.info("Vendor " + vendorName + " added Ticket-" + ticketId);
-            logTicketMovement("Ticket-"+ ticketId + " added by "+ vendorName +" for: " + eventName);  // Log the addition
+            logger.info("Vendor " + Thread.currentThread().getName() + " added Ticket-" + ticketId);
+            logTicketMovement("Ticket-"+ ticketId + " added by "+ Thread.currentThread().getName() +" for: " + eventName);  // Log the addition
 
             notEmpty.signalAll(); // Notify customers waiting for tickets
         } finally {
@@ -149,7 +145,7 @@ public class TicketPoolService {
         try {
             // Wait until a ticket is available or all tickets are sold
             while (ticketpool.isEmpty() && ticketsSold.get() < totalTickets) {
-                logger.info("TicketPool Empty. "+Thread.currentThread().getName()+" waiting for tickets to be added...");
+                logger.info("TicketPool Empty. Customer "+Thread.currentThread().getName()+" waiting for tickets to be added...");
                 notEmpty.await();
             }
 
@@ -173,10 +169,8 @@ public class TicketPoolService {
             ticketInDb.setCustomerId(customerId);
             ticketRepository.save(ticketInDb);
 
-            // Find the customer name
-            Customer customer = customerRepository.findById(customerId).orElse(null);
-            String customerName = (customer != null) ? customer.getName() : "Unknown Vendor";
-            logTicketMovement("Ticket-"+ ticket.getTicketId() + " bought by "+ customerName +" for LKR." + ticket.getTicketPrice());
+
+            logTicketMovement("Ticket-"+ ticket.getTicketId() + " bought by "+ Thread.currentThread().getName() +" for LKR." + ticket.getTicketPrice());
 
             notFull.signalAll(); // Notify vendors waiting to add tickets
             return ticket;

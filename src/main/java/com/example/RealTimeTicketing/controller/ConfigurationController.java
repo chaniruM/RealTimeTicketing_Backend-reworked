@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Spring REST controller for managing the real-time ticketing system configuration.
+ * Provides endpoints for updating and retrieving the system configuration.
+ */
 @RestController
 @RequestMapping("/api/configuration")
 public class ConfigurationController {
@@ -20,6 +24,12 @@ public class ConfigurationController {
     @Autowired
     private TicketPoolService ticketPoolService;
 
+    /**
+     * Updates the system configuration with the provided configuration object.
+     *
+     * @param configuration The Configuration object containing the updated settings.
+     * @return A ResponseEntity containing a success message upon successful update.
+     */
     @PostMapping
     public ResponseEntity<Map<String, String>> updateConfiguration(@RequestBody Configuration configuration) {
         configurationService.updateConfiguration(configuration);
@@ -33,6 +43,11 @@ public class ConfigurationController {
         return ResponseEntity.ok(response);
     }
 
+    /**
+     * Retrieves the current system configuration.
+     *
+     * @return A ResponseEntity containing the retrieved Configuration object.
+     */
     @GetMapping
     public ResponseEntity<Configuration> getConfiguration() {
         configurationService.loadConfiguration();

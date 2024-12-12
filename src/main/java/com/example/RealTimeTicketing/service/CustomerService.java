@@ -6,22 +6,16 @@ import com.example.RealTimeTicketing.repository.CustomerRepository;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 /**
- * Service class responsible for simulating customer behavior in the real-time ticketing system.
- * It creates a separate thread to continuously attempt purchasing tickets for a specific customer
+ * Service class simulating customer behavior in the real-time ticketing system.
+ * Creates a separate thread to continuously attempt purchasing tickets for a specific customer
  * at a defined retrieval rate.
- *
- * **Thread Safety Considerations:**
- * This class uses a prototype scope (`@Scope("prototype")`) which creates a new bean instance
- * for each injection.
  */
 @Service
-@Scope("prototype")
 public class CustomerService implements Runnable {
 
     private static final Logger logger = LogManager.getLogger(CustomerService.class);
@@ -40,9 +34,26 @@ public class CustomerService implements Runnable {
     //Retrieval rate (in seconds) at which the customer attempts to purchase tickets.
     private int retrievalRate;
 
+    /**
+     * Sets the customer details (ID and retrieval rate) for this service instance.
+     *
+     * @param customerId Unique identifier of the customer.
+     * @param retrievalRate Retrieval rate (in seconds) for the customer.
+     */
     public void setCustomerDetails(String customerId, int retrievalRate) {
         this.customerId = customerId;
         this.retrievalRate = retrievalRate;
+    }
+
+    /**
+     * Sets the dependencies (injected services) for this service instance.
+     *
+     * @param ticketPoolService Service instance for interacting with the TicketPool.
+     * @param customerRepository Repository instance for interacting with the Customer table.
+     */
+    public void setDependencies(TicketPoolService ticketPoolService, CustomerRepository customerRepository) {
+        this.ticketPoolService = ticketPoolService;
+        this.customerRepository = customerRepository;
     }
 
     /**
@@ -53,26 +64,25 @@ public class CustomerService implements Runnable {
     @Override
     public void run() {
         try {
-            Customer customer = customerRepository.findById(customerId).orElse(null);
-            String customerName = (customer != null) ? customer.getName() : "Unknown Customer";
-            while (true) {
+            while (!Thread.currentThread().isInterrupted()) {
                 if (ticketPoolService.allTicketsSold()) {
-                    logger.info("Customer " + customerName + " finished purchasing tickets.");
+                    logger.info("Customer " + Thread.currentThread().getName() + " finished purchasing tickets.");
                     break;
                 }
 
                 Ticket ticket = ticketPoolService.removeTicket(customerId);
                 if (ticket != null) {
-                    logger.info("Customer " + customerName + " purchased Ticket-" + ticket.getTicketId());
+                    logger.info("Customer " + Thread.currentThread().getName() + " purchased Ticket-" + ticket.getTicketId());
                 }else {
-                    logger.warn("Customer " + customerName + " failed to purchase ticket-" + ticket.getTicketId());
+                    logger.warn("Customer " + Thread.currentThread().getName() + " failed to purchase ticket-" + ticket.getTicketId());
                 }
                 Thread.sleep(retrievalRate * 1000); // Simulate retrieval delay
             }
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();
-            System.out.println(Thread.currentThread().getName() + " was interrupted.");
             logger.warn(Thread.currentThread().getName() + " was interrupted.");
+        }finally {
+            logger.info(Thread.currentThread().getName() + " is stopping gracefully.");
         }
     }
 

@@ -5,6 +5,9 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 
+/**
+ * Represents a ticket in the real-time ticketing system.
+ */
 @Document(collection = "tickets")
 public class Ticket {
 
